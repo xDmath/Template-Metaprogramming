@@ -8,6 +8,7 @@ template<unsigned N>
 struct factorial {
     static constexpr bm::uint1024_t value = N * factorial<N - 1>::value;
 };
+
 template<>
 struct factorial<0> {
     static constexpr bm::uint1024_t value = 1;
